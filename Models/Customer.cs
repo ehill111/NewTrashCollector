@@ -16,6 +16,12 @@ namespace NewTrashCollector.Models
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }
         public IdentityUser IdentityUser { get; set; }
-        
+        public List<DayOfWeek> Days { get; set; }
+        [Display(Name = "Special PickUp")]
+        public DateTime SpecialPickUp { get; set; }
+        [Display(Name = "Start Suspend")]
+        public DateTime StartSuspend { get; set; }
+        [Display(Name = "Stop Suspend")]
+        public DateTime StopSuspend { get; set; }
     }
 }
